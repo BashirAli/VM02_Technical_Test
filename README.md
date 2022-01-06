@@ -32,6 +32,6 @@ To run the test code:
 2. navigate to the project folder of this repo. 
 3. Run the following command into CMD
 
-** python -m unittest test/composite_transform_test.py ** 
+**python -m unittest test/composite_transform_test.py** 
 
 This should run the unit tests
