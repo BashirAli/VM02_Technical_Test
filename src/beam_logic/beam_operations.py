@@ -7,7 +7,6 @@ from datetime import datetime
 from beam_logic import constants
 from apache_beam.options.pipeline_options import PipelineOptions
 
-
 class PipelineRunner:
     """
     Base class for running an apache beam pipeline
@@ -24,7 +23,6 @@ class PipelineRunner:
         Method which runs the apache beam pipeline
         :return:
         """
-
         with beam.Pipeline(options=self.beam_options) as pipe_line:
             # view as returns the state of the PipelineOptions subclass i.e. @CustomOptions
             args = self.beam_options.view_as(CustomOptions)
@@ -51,7 +49,6 @@ class VM02_Comp_Transform(beam.PTransform):
     """
     PTransform is the base class that are used for composite transformation classes (basically grouped transformations)
     """
-
     def expand(self, p_collection):
         """
         for composite transforms, the expand method must be overridden with the main logic
@@ -105,8 +102,6 @@ class Convert_CSV_To_Dict(beam.DoFn):
     Convert_CSV_To_Dict is a sub class of DoFn which splits item in a PCollection in to a dictionary
     Note: DoFn is the base class which hosts all logic that a ParDo needs to do.
     """
-
-    #
     def process(self, element):
         """
         The main method in a DoFn class which needs to be overridden. This method splits item in PCollection by ','
@@ -128,7 +123,6 @@ class CustomOptions(PipelineOptions):
     """
     CustomOptions class which inherits PipelineOptions to allow for user provided options when running the pipeline
     """
-
     @classmethod
     def _add_argparse_args(cls, parser):
         """
@@ -143,5 +137,5 @@ class CustomOptions(PipelineOptions):
             help=' File path to input file.')
         parser.add_argument(
             '--output-path',
-            required=True,
+            default='../output/results',
             help='File path to which output files are saved to.')

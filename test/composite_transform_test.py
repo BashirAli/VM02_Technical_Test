@@ -1,3 +1,6 @@
+"""
+unit test file which tests the Composite Transform class @VM02_Comp_Transform
+"""
 import unittest
 import apache_beam as beam
 from apache_beam.testing.test_pipeline import TestPipeline
@@ -21,10 +24,12 @@ transaction_data = [
      'destination': 'dest_6', 'transaction_amount': 30.1}
 ]
 
+
 class VM02_Comp_Transform_Test(unittest.TestCase):
     """
     Unit Test Class which tests @VM02_Comp_Transform Composite Transform class
     """
+
     def test_comp_transform(self):
         """
         unit test 1 - Uses Apache Beam's Test Pipeline class to test @VM02_Comp_Transform on a set of manual data
@@ -47,6 +52,7 @@ class VM02_Comp_Transform_Test(unittest.TestCase):
                     ('2012-01-01 01:01:01 UTC', 30.1),
                     ('2021-01-01 01:01:01 UTC', 45.2)])
             )
+
 
 if __name__ == '__main__':
     unittest.main()
