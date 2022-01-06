@@ -25,7 +25,7 @@ This should run the repo and produce an output with a ***jsonl.gz*** file extens
 
 
 # Run Unit Test
-To run the source code: 
+To run the test code: 
 1. Open CMD (Command Prompt)
 2. navigate to the project folder of this repo. See here for Windows 10 CMD example: **https://www.howtogeek.com/659411/how-to-change-directories-in-command-prompt-on-windows-10/#:~:text=If%20the%20folder%20you%20want,window%2C%20and%20then%20press%20Enter.** 
 3. Input the following command in to CMD
