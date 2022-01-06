@@ -17,7 +17,7 @@ To run the source code:
 2. navigate to the code-env folder of this repo. See here for Windows 10 CMD example: **https://www.howtogeek.com/659411/how-to-change-directories-in-command-prompt-on-windows-10/#:~:text=If%20the%20folder%20you%20want,window%2C%20and%20then%20press%20Enter.** 
 3. Run the following command: 
 
-** pip install -r requirements.txt **
+**pip install -r requirements.txt**
 
 4. On completion, navigate to the src folder of this repo. Run the following command:
 
