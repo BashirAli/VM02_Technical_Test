@@ -4,13 +4,15 @@ Allows for code portability
 """
 import apache_beam as beam
 from datetime import datetime
-from beam_logic import constants
+from src.beam_logic import constants
 from apache_beam.options.pipeline_options import PipelineOptions
+
 
 class PipelineRunner:
     """
     Base class for running an apache beam pipeline
     """
+
     def __init__(self):
         """
         Constructor
@@ -49,6 +51,7 @@ class VM02_Comp_Transform(beam.PTransform):
     """
     PTransform is the base class that are used for composite transformation classes (basically grouped transformations)
     """
+
     def expand(self, p_collection):
         """
         for composite transforms, the expand method must be overridden with the main logic
@@ -102,6 +105,7 @@ class Convert_CSV_To_Dict(beam.DoFn):
     Convert_CSV_To_Dict is a sub class of DoFn which splits item in a PCollection in to a dictionary
     Note: DoFn is the base class which hosts all logic that a ParDo needs to do.
     """
+
     def process(self, element):
         """
         The main method in a DoFn class which needs to be overridden. This method splits item in PCollection by ','
@@ -123,6 +127,7 @@ class CustomOptions(PipelineOptions):
     """
     CustomOptions class which inherits PipelineOptions to allow for user provided options when running the pipeline
     """
+
     @classmethod
     def _add_argparse_args(cls, parser):
         """

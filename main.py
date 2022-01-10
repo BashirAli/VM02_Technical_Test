@@ -1,4 +1,4 @@
-from beam_logic.beam_operations import PipelineRunner
+from src.beam_logic.beam_operations import PipelineRunner
 
 
 def main():
